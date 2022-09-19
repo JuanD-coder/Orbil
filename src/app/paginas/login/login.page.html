@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="metodo-get"></ion-back-button>
+    <ion-title  class="ion-text-center" color="primary"> Acceder </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="Validacion()">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+
+              <ion-item>
+                <ion-label position="floating"> Usuario </ion-label>
+                <ion-input formControlName="user" name="user" type="number">  </ion-input>
+              </ion-item>
+
+            <ion-item>
+              <ion-label position="floating"> Password </ion-label>
+              <ion-input formControlName="pass" name="pass" type="password">  </ion-input>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+
+          <ion-button type="submit" [disabled]="!form.valid"
+                      expand="block"  
+                      color="success"
+                      shape="round"
+                      size="small"
+                      fill="outline"
+                      strong="strong"> Ingresar </ion-button>
+                      
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <span>{{respuesta}}</span>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

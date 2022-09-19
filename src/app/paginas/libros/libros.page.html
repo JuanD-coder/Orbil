@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Libros</ion-title> 
+    <ion-back-button slot="start" defaultHref="home" color="danger"></ion-back-button>
+  </ion-toolbar>
+
+  <ion-toolbar > 
+    <ion-searchbar color="light" placeholder="Buscar" animated (ionChange)="searchCustomer($event)"></ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <ion-list *ngFor="let libro of searchLibros" >
+
+    <ion-item [routerLink] = "['/detalle', libro.Pk_Elemento]">
+
+      <ion-img  style="width: 35%;" src="{{libro.Imagen}}"></ion-img>
+
+    <ion-item style="width: 65%;">
+      <ion-text style="overflow: initial;">
+        <strong>{{libro.Nombre_Elementos}}</strong> <br>
+        <sub>{{libro.Autor}}</sub>
+        <p style="width: 170%;" >  {{libro.Descripcion}}</p>
+
+      </ion-text>
+    </ion-item>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

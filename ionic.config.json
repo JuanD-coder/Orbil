@@ -1,0 +1,7 @@
+{
+  "name": "Orbil_ion_1.1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Libro </ion-title>
+     <ion-back-button slot="start" defaultHref="list" color="danger"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <ion-list *ngFor="let libro of content" >
+  <ion-card > 
+   
+    <ion-item> 
+      <img src="{{libro.Imagen}}" class="foto"> 
+    </ion-item>    
+  
+    <div class="text">  
+       
+      <ion-item> 
+        <ion-icon name="person-outline" class="icono"></ion-icon> 
+         <span>Autor: {{libro.Autor}} </span> 
+      </ion-item> 
+
+      <ion-item> <ion-icon name="calendar-number-outline" class="icono"></ion-icon>  
+        <span>Nombre: {{libro.Nombre}} </span> </ion-item> 
+ 
+      <ion-item> <ion-icon name="text-outline" class="icono"></ion-icon> 
+         <span> Descripcion: {{libro.Descripcion}} </span></ion-item> 
+    </div>   
+
+
+    <span class="text-primary" >  </span>
+
+  </ion-card>
+
+</ion-list>
+  
+</ion-content>
+
